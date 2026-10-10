@@ -1,0 +1,215 @@
+[
+  {
+    "name": "01 - Eligible customer",
+    "user_prompt": "You are a customer interested in a Loan Against Property offer. Answer naturally and consistently: the property is a residential house; ownership is joint with your spouse; original property documents are available; you need ₹50 lakh; you are salaried and your salary is credited to your bank account; the property's market value is ₹1 crore; and you want a 10-year tenure. Provide details only when the agent asks. If all required questions are completed, accept the next steps.",
+    "metrics": [
+      "The agent captures all seven eligibility checklist items before closing or handing off.",
+      "The agent treats residential property, joint ownership, available original documents, bank-account income, ₹50 lakh request, ₹1 crore market value, and 10-year tenure as eligible preliminary answers.",
+      "The agent explains that eligibility is preliminary and final approval depends on lender verification."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "02 - Agricultural property disqualification",
+    "user_prompt": "You are interested in a Loan Against Property offer. When asked, explain that the property is agricultural land. Answer any earlier questions naturally, but do not change this fact. Provide details only when asked.",
+    "metrics": [
+      "The agent politely disqualifies the customer as soon as agricultural property is identified.",
+      "The agent does not continue the normal eligibility checklist after the disqualifying answer."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "03 - Income received in cash",
+    "user_prompt": "You are interested in a Loan Against Property offer. You are self-employed, but you receive all your income in cash and do not receive it in a bank account. Reveal this when asked about occupation and income mode. Provide other details only when asked.",
+    "metrics": [
+      "The agent disqualifies the customer when they confirm income is received only in cash.",
+      "The agent explains politely that income must be received through a bank account for this offer."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "04 - Existing loan or EMI reduction",
+    "user_prompt": "You are calling because you already have a loan against your property and want to reduce your EMI or transfer the existing loan. Explain this when the agent asks your purpose. Do not pretend you are applying for a new loan.",
+    "metrics": [
+      "The agent identifies the existing-loan or EMI-reduction intent.",
+      "The agent routes the customer to a loan-transfer specialist and ends the normal qualification flow."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "05 - Requested amount above maximum",
+    "user_prompt": "You want a new Loan Against Property loan and initially request ₹90 lakh. If the agent offers a maximum of ₹75 lakh, say you are willing to continue with ₹75 lakh. Your property is residential, ownership is sole, original documents are available, you are self-employed with income credited to your bank account, market value is ₹1.5 crore, and desired tenure is 12 years. Give each answer when asked.",
+    "metrics": [
+      "The agent does not offer more than ₹75 lakh.",
+      "The agent offers ₹75 lakh as an alternative and continues only after the customer accepts.",
+      "The agent completes all seven checklist items before handoff."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "06 - Customer is busy and requests callback",
+    "user_prompt": "You are interested in the offer, but you are busy and cannot talk now. Say you would prefer a callback tomorrow afternoon. If asked for a specific time, say 3 PM. Do not proceed with qualification during this conversation.",
+    "metrics": [
+      "The agent acknowledges that the customer is busy.",
+      "The agent asks for or confirms a callback time and ends the conversation without continuing the checklist."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "07 - Original documents unavailable",
+    "user_prompt": "You want a new Loan Against Property loan. When asked about property documents, say you only have photocopies and the original documents are unavailable. Keep this fact consistent and answer other questions only if asked.",
+    "metrics": [
+      "The agent disqualifies the customer when original property documents are unavailable.",
+      "The agent does not continue the normal checklist after this disqualifying answer."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "08 - Invalid tenure below minimum",
+    "user_prompt": "You want a new Loan Against Property loan. When asked about tenure, say you want a 2-year tenure and do not agree to a longer tenure. Answer other questions naturally when asked.",
+    "metrics": [
+      "The agent disqualifies the customer because the requested tenure is below the allowed 3-year minimum.",
+      "The agent does not incorrectly qualify the customer."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "09 - Invalid tenure above maximum",
+    "user_prompt": "You want a new Loan Against Property loan. When asked about tenure, say you want a 16-year tenure and do not agree to a shorter tenure. Answer other questions naturally when asked.",
+    "metrics": [
+      "The agent disqualifies the customer because the requested tenure exceeds the allowed 15-year maximum.",
+      "The agent does not incorrectly qualify the customer."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  },
+  {
+    "name": "10 - Out-of-order information and no duplicate questions",
+    "user_prompt": "You are an eligible customer. Before the agent asks all the questions, spontaneously mention that the property is a residential flat, jointly owned with your spouse, and worth about ₹90 lakh. Original documents are available; you need ₹40 lakh; you are salaried and your salary is credited to your bank account; you want a 10-year tenure. If the agent asks about information you have already given, politely remind it that you already answered. Provide details naturally.",
+    "metrics": [
+      "The agent remembers relevant information supplied out of order.",
+      "The agent does not ask again for information already provided.",
+      "The agent obtains any missing checklist information before handoff."
+    ],
+    "dynamic_variables": {
+      "company_name": "Home Credit",
+      "customer_name": "Test Customer",
+      "agent_name": "Alex",
+      "agent_gender": "neutral",
+      "language_to_speak": "English",
+      "current_day": "Monday",
+      "current_date": "2026-10-12",
+      "current_time": "10:00 AM",
+      "additional_context_from_rag": ""
+    },
+    "tool_mocks": [],
+    "type": "simulation"
+  }
+]
